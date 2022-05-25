@@ -19,7 +19,7 @@ else {
 if ($choice -eq '1') {
 
     if (-not(Test-Path -Path $output -PathType Leaf)) {
-        try {
+        {
             Write-Host "Downloading pop-cat Empty Icon"
             $url = $pcatempty
             $output = $pcatemptyoutput
@@ -31,7 +31,7 @@ if ($choice -eq '1') {
     }
 
     if (-not(Test-Path -Path $output -PathType Leaf)) {
-        try {
+        {
             Write-Host "Downloading pop-cat Full Icon"
             $url = $pcatfull
             $output = $pcatfulloutput

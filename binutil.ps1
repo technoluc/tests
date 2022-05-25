@@ -8,7 +8,6 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
   Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList $PSItem
   Exit
  }
-}
 
 # Set the working location to the same location as the script
 # Write-Host "Setting Working Directory to Script Root"

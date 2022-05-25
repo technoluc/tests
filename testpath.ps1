@@ -18,24 +18,22 @@ else {
 
 if ($choice -eq '1') {
 
-    if (-not(Test-Path -Path $output -PathType Leaf)) {
+    if (-not(Test-Path -Path $pcatemptyoutput -PathType Leaf)) {
         {
             Write-Host "Downloading pop-cat Empty Icon"
             $url = $pcatempty
-            $output = $pcatemptyoutput
-            Invoke-WebRequest -Uri $url -OutFile ( New-Item -Path "$output" -Force )
+            Invoke-WebRequest -Uri $url -OutFile ( New-Item -Path "$pcatemptyoutput" -Force )
         }
         else {
             Write-Host "Pop-cat Empty Icon already exists"
         }
     }
 
-    if (-not(Test-Path -Path $output -PathType Leaf)) {
+    if (-not(Test-Path -Path $pcatfulloutput -PathType Leaf)) {
         {
             Write-Host "Downloading pop-cat Full Icon"
             $url = $pcatfull
-            $output = $pcatfulloutput
-            Invoke-WebRequest -Uri $url -OutFile ( New-Item -Path "$output" -Force )
+            Invoke-WebRequest -Uri $url -OutFile ( New-Item -Path "$pcatfulloutput" -Force )
         }
         else {
             Write-Host "Pop-cat Full Icon already exists"
